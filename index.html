@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online tool to compress images from 1MB to 100KB. Supports JPG, PNG, WEBP formats with both single and bulk compression options.">
+    <meta name="keywords" content="image compressor, reduce image size, bulk image compression, optimize images, free image tool">
+    <title>Image Compressor - Reduce Image Size from 1MB to 100KB Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://yourwebsite.com/image-compressor" />
+</head>
+<body>
+    <header class="header">
+        <h1>Image Compression Tool</h1>
+        <p class="tagline">Reduce your image file sizes without losing quality</p>
+    </header>
+
+    <main class="container">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="single">Single Image</button>
+            <button class="tab-btn" data-tab="bulk">Bulk Compression</button>
+        </div>
+
+        <!-- Single Image Compression Tab -->
+        <div id="single" class="tab-content active">
+            <div class="upload-area" id="single-upload-area">
+                <p>Drag & drop your image here or click to browse</p>
+                <p class="file-restrictions">Supports JPG, PNG, WEBP (Max 5MB)</p>
+                <input type="file" id="single-file-input" accept="image/jpeg, image/png, image/webp">
+                <button class="btn" id="single-browse-btn">Select Image</button>
+            </div>
+
+            <div class="slider-container">
+                <label for="single-quality-slider">Compression Quality: <span id="single-quality-value">70</span>%</label>
+                <input type="range" id="single-quality-slider" class="slider" min="10" max="90" value="70">
+            </div>
+
+            <button class="btn btn-primary" id="single-compress-btn" disabled>Compress Image</button>
+
+            <div class="progress-container" id="single-progress-container">
+                <progress id="single-compression-progress" value="0" max="100"></progress>
+                <p id="single-progress-text">Compressing...</p>
+            </div>
+
+            <div class="preview-container" id="single-preview-container">
+                <div class="comparison">
+                    <div class="image-box">
+                        <h3>Original Image</h3>
+                        <img id="single-original-img" src="" alt="Original image preview">
+                        <div class="info" id="single-original-info"></div>
+                    </div>
+                    <div class="image-box">
+                        <h3>Compressed Image</h3>
+                        <img id="single-compressed-img" src="" alt="Compressed image preview">
+                        <div class="info" id="single-compressed-info"></div>
+                        <a href="#" class="btn download-btn" id="single-download-btn" download>Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bulk Image Compression Tab -->
+        <div id="bulk" class="tab-content">
+            <div class="upload-area" id="bulk-upload-area">
+                <p>Drag & drop your images here or click to browse</p>
+                <p class="file-restrictions">Supports JPG, PNG, WEBP (Max 5MB each, 20 files max)</p>
+                <input type="file" id="bulk-file-input" accept="image/jpeg, image/png, image/webp" multiple>
+                <button class="btn" id="bulk-browse-btn">Select Images</button>
+            </div>
+
+            <div class="file-list" id="bulk-file-list"></div>
+
+            <div class="controls">
+                <div class="slider-container">
+                    <label for="bulk-quality-slider">Compression Quality: <span id="bulk-quality-value">70</span>%</label>
+                    <input type="range" id="bulk-quality-slider" class="slider" min="10" max="90" value="70">
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-danger" id="bulk-clear-btn" disabled>Clear All</button>
+                    <button class="btn btn-primary" id="bulk-compress-btn" disabled>Compress All</button>
+                </div>
+            </div>
+
+            <div class="progress-container" id="bulk-progress-container">
+                <progress id="bulk-compression-progress" value="0" max="100"></progress>
+                <p id="bulk-progress-text">0/0 files processed</p>
+            </div>
+
+            <div class="preview-grid" id="bulk-preview-container"></div>
+
+            <div class="batch-download">
+                <button class="btn btn-success" id="bulk-download-btn">Download All as ZIP</button>
+            </div>
+        </div>
+
+        <p class="error" id="error-message"></p>
+        <p class="success" id="success-message"></p>
+    </main>
+
+    <article class="seo-content">
+        <h2>How to Reduce Image Size Without Losing Quality</h2>
+        
+        <section>
+            <h3>Why Image Compression Matters</h3>
+            <p>In today's digital world, images account for more than 60% of a webpage's size. Large images can significantly slow down your website, leading to:</p>
+            <ul>
+                <li>Poor user experience with slow loading times</li>
+                <li>Lower search engine rankings (Google considers page speed in its algorithm)</li>
+                <li>Higher bandwidth costs for website owners</li>
+                <li>Increased bounce rates as visitors leave slow-loading pages</li>
+            </ul>
+            <p>Our free online image compression tool helps you solve these problems by reducing image file sizes while maintaining visual quality.</p>
+        </section>
+
+        <section>
+            <h3>Best Image Compression Practices</h3>
+            <p>Follow these tips for optimal image compression:</p>
+            <ol>
+                <li><strong>Choose the right format:</strong> Use JPEG for photographs, PNG for graphics with transparency, and WEBP for modern browsers.</li>
+                <li><strong>Resize before compressing:</strong> Scale images to their display dimensions before uploading.</li>
+                <li><strong>Find the quality sweet spot:</strong> Our quality slider (70% is usually optimal) lets you balance size and quality.</li>
+                <li><strong>Compress in bulk:</strong> Save time by processing multiple images at once with our bulk compression feature.</li>
+                <li><strong>Use descriptive filenames:</strong> Helps with SEO when using images on websites.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Common Questions About Image Compression</h3>
+            
+            <div class="faq-item">
+                <h4>Will compressing my images reduce their quality?</h4>
+                <p>Some quality reduction is inevitable with lossy compression (JPEG/WEBP), but our tool helps you find the perfect balance between file size and visual quality. For no quality loss, consider using PNG format (though file sizes will be larger).</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>How much can I reduce my image file size?</h4>
+                <p>Typical reductions range from 50-80% of the original size. A 1MB image can often be reduced to 100-200KB with minimal quality loss.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Is there a limit to how many images I can compress?</h4>
+                <p>Our bulk compression feature supports up to 20 images at once, with each file limited to 5MB. There's no daily limit - you can process as many batches as you need.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Are my images stored on your servers?</h4>
+                <p>No. All processing happens in your browser. Your images never leave your computer, ensuring complete privacy.</p>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <h3>Ready to Optimize Your Images?</h3>
+            <p>Try our free image compression tool today to speed up your website, save storage space, and improve your online presence!</p>
+            <div class="cta-buttons">
+                <a href="#single" class="btn btn-primary">Compress Single Image</a>
+                <a href="#bulk" class="btn btn-success">Compress Multiple Images</a>
+            </div>
+        </section>
+    </article>
+
+    <footer class="footer">
+        <p>© 2023 Image Compression Tool. All rights reserved.</p>
+        <p>A free online service to reduce image file sizes without quality loss.</p>
+    </footer>
+
+    <!-- External Libraries -->
+    <script src="assets/jszip.min.js"></script>
+    <script src="assets/FileSaver.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
